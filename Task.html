@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<title>Online HTML Editor</title>
+<head>
+    <style>
+        .grid-container{
+            display:flex;
+            flex-direction:column;
+            align-items: center;
+        }
+         .box {
+width: 300px;
+border:2px solid grey;
+ margin: 10px;
+cursor: pointer;
+
+}
+input[type='radio'] {
+    accent-color: green;
+}
+
+  
+  @media only screen and (min-width: 1024px) {
+   
+            .grid-container {
+                flex-direction: column;
+                justify-content: center;
+            }
+            .box {
+               
+                margin: 10px;
+            }
+        }      
+
+
+#topbox{
+    height:50px;
+    padding-top:20px;
+}
+.standard-price {
+margin-left:30px;
+font-size:10px;
+}
+marquee{
+    font-size:10px;
+    margin-left:210px;
+    background: green;
+    color:white;
+} 
+ .discount{
+margin-left: 10px;
+background: green;
+font-size:13px;
+color:white;
+ }
+ 
+ .price1{
+     margin-left:100px;
+ }
+ .actual-price{
+     margin-left:240px;
+     font-size:12px;
+ }
+ #middlebox{
+     height:200px;
+ }
+ .options{
+     margin-left:50px;
+     
+ }
+ .options p{
+     margin-left:20px;
+ }
+ p.freeshipping{
+     color: green ;
+
+ }
+ p >span{
+     margin-left:70px;
+     color:black;
+ }
+ button{
+     color:white;
+     height: 40px;
+     width:300px;
+     background-color:green;
+     border: none ;
+     cursor: pointer;
+     
+ }
+ .separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: green;
+}
+.separator::before,
+.separator::after {
+  content: '';
+  flex:  1;
+  border-bottom: 1px solid black;
+  
+}
+
+.separator:not(:empty)::before {
+  margin-right: .25em;
+ 
+}
+
+.separator:not(:empty)::after {
+  margin-left: .25em;
+}
+    </style>
+</head>
+<body>
+
+  <div class="separator">YAY! it's BOGO</div>
+       
+        
+ <div class="grid-container">
+  
+    
+<div class="box" id="topbox">
+<input type="radio" id="unit1" name="units" checked>
+<label for="unit1">1 Unit</label><span class="discount">10% Off</span><span class="price1">$30</span>
+<span class="standard-price">Standard Price</span>
+</div>
+
+<div class="box" id="middlebox">
+   <marquee width="80px" height="20px"direction="up" scrollamount="2">MOST POPULAR</marquee>
+    
+<input type="radio" id="unit2" name="units"unchecked>
+<label for="unit2">2Unit</label><span class="discount">20% Off</span>
+<span class="price1">$40</span>
+<span class="actual-price"><s>$100</s></span>
+<div class="options">
+<p>Size &#160 Color</p>
+    <span>#1</span>
+    <select>
+     <option value="XS">XS</option>
+     <option value="S">S</option>
+     <option value="M">M</option>
+     <option value="L">L</option>
+     </select>
+<select>
+     <option value="White">White</option>
+     <option value="Blue">Blue</option>
+     <option value="Pink">Pink</option>
+     <option value="Black">Black</option>
+     <option value="Green">Green</option>
+     <option value="Yellow">Yellow</option>
+     </select>
+ 
+</div>
+<div class="options">
+ <span>#2</span>
+ <select>
+     <option value="XS">XS</option>
+     <option value="S">S</option>
+     <option value="M">M</option>
+     <option value="L">L</option>
+     </select>
+<select>
+     <option value="White">White</option>
+     <option value="Blue">Blue</option>
+     <option value="Pink">Pink</option>
+     <option value="Black">Black</option>
+     <option value="Green">Green</option>
+     <option value="Yellow">Yellow</option>
+     </select>
+</div>
+</div>
+<div class="box">
+    <input type="radio" id="unit3" name="units" unchecked>
+    <label for="unit3">3 Unit</label>
+    <span class="discount">30% Off</span>
+<span class="price1">$60</span>
+<span class="actual-price"><s>$150</s></span>
+    
+    
+</div>
+
+<p class="freeshipping">Free Delivery<span class="total">Total: $50.00</span></p>
+<button>+Add to cart</button>
+</div>
+</body>
+</html>
